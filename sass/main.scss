@@ -1,0 +1,85 @@
+:root {
+    --primary: #6200ee;
+    --primary-light: #b794f6;
+    --primary-dark: #3700b3;
+    --secondary: #03dac5;
+    --gray-light: #e5e5e5;
+    --gray: #bdbdbd;
+    --gray-dark: #383838;
+    --white: #ffffff;
+  }
+  
+  p {
+    font-family: "Open Sans", sans-serif;
+    color: var(--gray-dark);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .todo {
+    border: 1px solid var(--gray-light);
+    margin: 1rem;
+    &__input {
+      max-width: 720px;
+      min-width: 75%;
+      margin: 2rem 0;
+    }
+    &__input-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__list {
+      margin: 2rem;
+    }
+    &__item {
+      display: flex;
+      &.list-group-item {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--gray-light);
+      }
+    }
+    &__text {
+      margin: 0;
+      align-items: center;
+      display: flex;
+      color: var(--gray-dark);
+    }
+    &__button {
+      &--add {
+        margin: 0.75rem;
+      }
+      &--remove {
+      }
+    }
+  }
+  
+  form {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 2px;
+    & .form-control {
+      border: none;
+    }
+  }
+  
+  input {
+    /* Tell the input to use all the available space */
+    flex-grow: 2;
+    border: none;
+  }
+  
+  input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+  }
+  

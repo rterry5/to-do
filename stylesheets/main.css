@@ -1,0 +1,95 @@
+/* line 1, ../sass/main.scss */
+:root {
+  --primary: #6200ee;
+  --primary-light: #b794f6;
+  --primary-dark: #3700b3;
+  --secondary: #03dac5;
+  --gray-light: #e5e5e5;
+  --gray: #bdbdbd;
+  --gray-dark: #383838;
+  --white: #ffffff;
+}
+
+/* line 12, ../sass/main.scss */
+p {
+  font-family: "Open Sans", sans-serif;
+  color: var(--gray-dark);
+}
+
+/* line 17, ../sass/main.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 26, ../sass/main.scss */
+.todo {
+  border: 1px solid var(--gray-light);
+  margin: 1rem;
+}
+/* line 29, ../sass/main.scss */
+.todo__input {
+  max-width: 720px;
+  min-width: 75%;
+  margin: 2rem 0;
+}
+/* line 34, ../sass/main.scss */
+.todo__input-container {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 38, ../sass/main.scss */
+.todo__list {
+  margin: 2rem;
+}
+/* line 41, ../sass/main.scss */
+.todo__item {
+  display: flex;
+}
+/* line 43, ../sass/main.scss */
+.todo__item.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gray-light);
+}
+/* line 49, ../sass/main.scss */
+.todo__text {
+  margin: 0;
+  align-items: center;
+  display: flex;
+  color: var(--gray-dark);
+}
+/* line 56, ../sass/main.scss */
+.todo__button--add {
+  margin: 0.75rem;
+}
+
+/* line 64, ../sass/main.scss */
+form {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 2px;
+}
+/* line 70, ../sass/main.scss */
+form .form-control {
+  border: none;
+}
+
+/* line 75, ../sass/main.scss */
+input {
+  /* Tell the input to use all the available space */
+  flex-grow: 2;
+  border: none;
+}
+
+/* line 81, ../sass/main.scss */
+input:focus {
+  /* removing the input focus blue box. Put this on the form if you like. */
+  outline: none;
+}

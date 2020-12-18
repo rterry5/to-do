@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav></nav>
+    <main class="todo container">
+        <div class="todo__input container-sm">
+            <h1>Add Task</h1>
+            <label for="task" id="add-task"></label>
+            <span id="error"></span>
+            <form class="todo__input-container" id="form" onsubmit="return validateForm();">
+                <input type="text" class="form-control" id="input" placeholder="Enter Task">
+                <button type="button" class="todo__button--add btn btn-primary" id="add" onsubmit="return validateForm();">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </form>
+        </div>
+        <div class="todo__all list-group">
+            <div class="todo__list" id="list">
+                <div class="todo__item list-group-item" id="item">
+                    <p class="todo__text" id="text">
+                        Study Javascript
+                    </p>
+                    <button class="todo__button--remove btn btn-danger" id="remove">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <div class="todo__item list-group-item">
+                    <p class="todo__text" id="text">
+                        Work out
+                    </p>
+                    <button class="todo__button--remove btn btn-danger" id="remove">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <div class="todo__item list-group-item">
+                    <p class="todo__text" id="text">
+                        Play Assassin's Creed
+                    </p>
+                    <button class="todo__button--remove btn btn-danger" id="remove">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
