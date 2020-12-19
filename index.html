@@ -19,40 +19,24 @@
             <h1>Add Task</h1>
             <label for="task" id="add-task"></label>
             <span id="error"></span>
-            <form class="todo__input-container" id="form" onsubmit="return validateForm();">
-                <input type="text" class="form-control" id="input" placeholder="Enter Task">
-                <button type="button" class="todo__button--add btn btn-primary" id="add" onsubmit="return validateForm();">
+            <form class="todo__input-container"method="post" id="form">
+                <input type="text" class="form-control" id="enter-task" placeholder="Enter Task">
+                <button class="todo__button--add btn btn-primary" id="add">
                     <i class="fas fa-plus"></i>
                 </button>
             </form>
         </div>
         <div class="todo__all list-group">
-            <div class="todo__list" id="list">
-                <div class="todo__item list-group-item" id="item">
+            <ul class="todo__list" id="list">
+                <!-- <li class="todo__item list-group-item" id="item">
                     <p class="todo__text" id="text">
                         Study Javascript
                     </p>
                     <button class="todo__button--remove btn btn-danger" id="remove">
                         <i class="fas fa-minus"></i>
                     </button>
-                </div>
-                <div class="todo__item list-group-item">
-                    <p class="todo__text" id="text">
-                        Work out
-                    </p>
-                    <button class="todo__button--remove btn btn-danger" id="remove">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                </div>
-                <div class="todo__item list-group-item">
-                    <p class="todo__text" id="text">
-                        Play Assassin's Creed
-                    </p>
-                    <button class="todo__button--remove btn btn-danger" id="remove">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                </div>
-            </div>
+                </li> -->
+            </ul>
         </div>
     </main>
 

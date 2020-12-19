@@ -1,31 +1,44 @@
-const form = document.getElementById('form');
-const addTask = document.getElementById('add-task');
-const input = document.getElementById('input');
-const addButton = document.getElementById('add');
-const list = document.getElementById('list');
-const text = document.getElementById('text');
-const removeButton = document.getElementById('remove');
+function getValue(e){
+    e.preventDefault();
+    let task = document.getElementById('enter-task');
 
-function validateForm() {
-    let taskInput = document.getElementById('input').value;
-	if (taskInput == '') {
-        document.getElementById('error').innerHTML = "Please Enter a Task"
-        return false;
-    } else if (taskInput != '') {
-        document.getElementById('error').innerHTML = '';
+    if(task.value != '') {
+        createTask(task.value);
+    } else {
+        task.value = '';
     }
 }
 
-function newTask() {
+function createTask(task){
+    let taskList = document.getElementById('list');
+    let newTask = document.createElement('li');
+    newTask.classList.add('todo__item', 'list-group-item');
+    newTask.id = 'item';
+    newTask.innerHTML = 
+    `
+    <p class="todo__text" id="text">
+        ${task}
+    </p>
+    <button class="todo__button--remove btn btn-danger" id="remove" onclick="removeTask()">
+        <i class="fas fa-minus"></i>
+    </button>
+    `;
 
+    taskList.appendChild(newTask);
+    clearInput();
+}
+
+function clearInput() {
+    let enterTask = document.getElementById('enter-task');
+    if (enterTask.value != '') {
+        enterTask.value = ''
+    }
+}
+
+function removeTask() {
+    let taskItem = document.getElementById('item');
+    taskItem.parentNode.removeChild(taskItem);
 }
 
 // Event Listeners
-addButton.addEventListener('click', e => {
-  e.preventDefault();
-  const taskInput = input.value.trim();
-  console.log(taskInput);
-  validateForm();
-  document.getElementById('input').value = '';
-  
-})
+document.getElementById('form').addEventListener('submit', getValue);
